@@ -12,6 +12,7 @@ This repository holds release downloads and public documentation only. The app's
 
 | Platform | Download | Start |
 | --- | --- | --- |
+| Linux, x64 | [Linux archive](https://github.com/junhewk/reviewtab/releases/download/v0.1.1/reviewtab-0.1.1-linux-x64.tar.gz) | Run `./reviewtab.sh` in a terminal |
 | macOS, Apple silicon (arm64) | [macOS archive](https://github.com/junhewk/reviewtab/releases/download/v0.1.1/reviewtab-0.1.1-macos-arm64.tar.gz) | Double-click `ReviewTab.command` |
 | Windows, x64 | [Windows ZIP](https://github.com/junhewk/reviewtab/releases/download/v0.1.1/reviewtab-0.1.1-windows-x64.zip) | Double-click `ReviewTab.bat` |
 
@@ -19,7 +20,9 @@ This repository holds release downloads and public documentation only. The app's
 
 **Windows:** This ZIP is **unsigned**. Smart App Control or other application-control policies may block it. Smart App Control blocked execution on the build machine, so packaged startup was not verified there. Unsigned ZIP distribution is intentional for this release; it is not a signed or Smart App Control-verified build.
 
-Only the attached assets are available. There is no Linux archive attached to release 0.1.1. Signing status and available platforms are specific to each release; older downloads do not describe this version.
+**Linux:** Unpack the archive, open a terminal in its folder and run `./reviewtab.sh`. Keep that terminal open while working.
+
+Signing status and available platforms are specific to each release; older downloads do not describe this version.
 
 The app is compiled with Bun 1.4.3. No source checkout or separately installed Node, Bun or Python runtime is needed.
 
@@ -68,6 +71,12 @@ Do not share a data folder concurrently across machines or with older app versio
 
 Download [SHA256SUMS](https://github.com/junhewk/reviewtab/releases/download/v0.1.1/SHA256SUMS) beside your archive. Each archive also has its own `.sha256` sidecar on the release.
 
+For a downloaded Linux archive, place its matching `.sha256` sidecar beside it and run:
+
+```sh
+sha256sum -c reviewtab-0.1.1-linux-x64.tar.gz.sha256
+```
+
 For a downloaded macOS archive, place its matching `.sha256` sidecar beside it and run:
 
 ```sh
@@ -85,3 +94,4 @@ Compare the Windows result with its entry in `SHA256SUMS`. Checksum agreement co
 ## Licence
 
 ReviewTab is free to use under its own licence. Read the `LICENSE.md` bundled with your download for the terms applicable to that version. Its `THIRD_PARTY_NOTICES.txt` lists included open-source components, their licences and the relinking-material offer.
+
