@@ -94,4 +94,3 @@ Compare the Windows result with its entry in `SHA256SUMS`. Checksum agreement co
 ## Licence
 
 ReviewTab is free to use under its own licence. Read the `LICENSE.md` bundled with your download for the terms applicable to that version. Its `THIRD_PARTY_NOTICES.txt` lists included open-source components, their licences and the relinking-material offer.
-
