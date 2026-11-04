@@ -1,106 +1,87 @@
 # ReviewTab
 
-A review workspace for confidential journal peer review, for reviewers who want a language model's
-help without sending manuscripts to services that keep them.
+A privacy/local-first, medical-centered reviewer-support workspace for confidential journal peer review.
 
-**Download:** [Releases](https://github.com/junhewk/reviewtab/releases). This repository holds the
-release files, this page and the licence only; the source code is not published.
+**This app is not an independent AI reviewer.** Human interpretation, editing, selection, adoption and rejection of suggestions are the intended workflow. Keeping scientific and editorial judgment and responsibility with the human is a deliberate ethical and product boundary, not unfinished automation.
 
-[한국어](#한국어) · [English](#english)
+This repository holds release downloads and public documentation only. The app's source repository is not published here.
 
-## 한국어
+## Download 0.1.1
 
-ReviewTab은 학술지 심사를 위한 검토 작업 공간입니다. 원고를 열고 논증도, 구간 검토, 인용 확인과
-검토자 메모로 심사를 정리합니다. 원고를 열고 메모하는 데에는 모델이 필요하지 않으며, 모델 작업은
-범위를 보여 준 뒤 승인할 때에만 실행합니다. 화면은 한국어와 영어를 지원합니다.
+[Release notes and all assets](https://github.com/junhewk/reviewtab/releases/tag/v0.1.1)
 
-### 모델과 원고
-
-- 모델은 이 컴퓨터나 개인 네트워크의 모델, 또는 데이터를 보관하지 않는 OpenRouter(ZDR)만 쓸 수
-  있습니다. 그 밖의 서비스는 거부합니다.
-- 원고는 이 컴퓨터에서 읽고, 승인한 작업에 필요한 부분만 고른 모델로 보냅니다. 참고문헌 조회는
-  승인할 때에만 학술 데이터베이스로 보냅니다. 제작자에게는 아무것도 보내지 않습니다.
-- 어떤 모델을 쓸지, 학술지의 기밀 유지와 AI 사용 규정을 지키는지는 검토자가 판단합니다.
-- 모든 사이트를 읽을 수 있는 브라우저 확장 프로그램은 화면의 원고도 읽을 수 있습니다. 그런
-  확장이 없는 브라우저나 프로필을 권합니다.
-
-### 설치와 시작
-
-[Releases](https://github.com/junhewk/reviewtab/releases)에서 운영체제에 맞는 파일을 받아 원하는
-폴더에 풉니다. 따로 설치할 프로그램은 없습니다.
-
-| 운영체제 | 파일 | 시작 |
+| Platform | Download | Start |
 | --- | --- | --- |
-| Windows 10/11 (x64) | `reviewtab-VERSION-windows-x64.zip` | `ReviewTab.bat` 두 번 클릭. 'PC 보호' 경고가 보이면 '추가 정보' > '실행' |
-| macOS 11 이상 (Apple silicon) | `reviewtab-VERSION-macos-arm64.tar.gz` | `ReviewTab.command` 두 번 클릭. 막히면 시스템 설정 > 개인정보 보호 및 보안 > '그래도 열기' |
-| Linux (x64, glibc 2.28 이상) | `reviewtab-VERSION-linux-x64.tar.gz` | 터미널에서 `./reviewtab.sh` |
+| macOS, Apple silicon (arm64) | [macOS archive](https://github.com/junhewk/reviewtab/releases/download/v0.1.1/reviewtab-0.1.1-macos-arm64.tar.gz) | Double-click `ReviewTab.command` |
+| Windows, x64 | [Windows ZIP](https://github.com/junhewk/reviewtab/releases/download/v0.1.1/reviewtab-0.1.1-windows-x64.zip) | Double-click `ReviewTab.bat` |
 
-브라우저에서 ReviewTab이 열립니다. 작업하는 동안 시작 창을 열어 두고, 끝내려면 그 창을 닫습니다.
-검토 자료는 앱 폴더와 따로 저장되므로, 새 버전은 새 폴더에 풀어 쓰면 됩니다. 자세한 내용은
-압축 안의 `README.txt`에 있습니다.
+**macOS:** Developer ID signed and notarized by Apple. Unpack the archive and confirm the normal macOS Open dialog on first launch.
 
-### 받은 파일 확인
+**Windows:** This ZIP is **unsigned**. Smart App Control or other application-control policies may block it. Smart App Control blocked execution on the build machine, so packaged startup was not verified there. Unsigned ZIP distribution is intentional for this release; it is not a signed or Smart App Control-verified build.
 
-Releases의 `SHA256SUMS`와 받은 파일의 SHA-256 값을 비교합니다.
+Only the attached assets are available. There is no Linux archive attached to release 0.1.1. Signing status and available platforms are specific to each release; older downloads do not describe this version.
 
-```
-sha256sum -c SHA256SUMS --ignore-missing          # Linux
-shasum -a 256 -c SHA256SUMS --ignore-missing      # macOS
-certutil -hashfile reviewtab-VERSION-windows-x64.zip SHA256   # Windows
-```
+The app is compiled with Bun 1.4.3. No source checkout or separately installed Node, Bun or Python runtime is needed.
 
-### 라이선스
+## What it supports
 
-무료로 제공하는 사용 허락이며 수정, 재배포, 역설계는 허용하지 않습니다. [LICENSE.md](LICENSE.md)를
-읽어 주세요. 함께 들어 있는 오픈 소스 구성 요소의 라이선스는 압축 안의
-`THIRD_PARTY_NOTICES.txt`에 있습니다.
+- **Argument:** inspect and edit source-linked argument diagrams and open review issues.
+- **Section review:** choose prose checks or a quantitative, qualitative, systematic, scoping or narrative-review methodology focus, within a limited budget.
+- **Citations and references:** choose local mechanical checks, approved bibliographic-record lookups or experimental deep content comparison.
+- **Reviewer-owned notes and comments:** inspect source and model suggestions side by side, then adopt, revise or reject them. Export explicitly adopted comments as Markdown.
 
-## English
+**Deep citation comparison is experimental and full-text retrieval has limitations.** Access restrictions, unreadable PDFs, images and external appendices can prevent comparison. Unavailable material remains unchecked; it is not itself evidence of a manuscript defect or fabrication.
 
-ReviewTab is a review workspace for journal peer review. Open a manuscript and work through it
-with an argument diagram, section review, citation checks and your own notes. Opening a
-manuscript and taking notes need no model; a model task runs only after it shows its scope and
-you approve it. The interface is in Korean and English.
+This is focused support, not an all-round review system. It does not aim to find every error, certify medical or scientific validity, reanalyse raw data/code/transcripts, reproduce statistical calculations, automatically rewrite manuscripts or decide publication. Suggestions and diagrams can be missing or mistaken; the reviewer writes the final judgment and comments.
 
-### Models and manuscripts
+## Start and use
 
-- Models can only be ones on your computer or a private network, or OpenRouter with zero data
-  retention (ZDR). Other services are refused.
-- Manuscripts are read on your computer. Only the part an approved task needs is sent to the
-  model you chose. Reference lookups go to scholarly databases only when you approve them.
-  Nothing is sent to the author.
-- Which model to use, and whether a journal's confidentiality and AI-use policies allow it, is
-  the reviewer's decision.
-- Browser extensions allowed to read all sites can also read the manuscript on the page. A
-  browser or profile without them is advised.
+1. Download and unpack the archive for your system.
+2. Open its start file from the table above. ReviewTab opens in your browser; keep the start window open while working.
+3. Open a manuscript. Viewing a document and taking notes need no model.
+4. Choose a model when needed. Each model task shows its scope and budget and runs only after approval.
+5. Review the suggestions and source evidence, then select and edit the comments you want to include.
 
-### Install and start
+The app interface supports English and Korean. Review output has its own recorded language setting; quotations stay in the source language.
 
-Download the file for your system from [Releases](https://github.com/junhewk/reviewtab/releases)
-and unpack it into any folder. Nothing else needs to be installed.
+The server is a local, single-user workspace, not a public multi-user service. Do not expose it directly to the internet.
 
-| System | File | Start |
-| --- | --- | --- |
-| Windows 10/11 (x64) | `reviewtab-VERSION-windows-x64.zip` | Double-click `ReviewTab.bat`. If Windows says it protected your PC, choose More info > Run anyway |
-| macOS 11 or later (Apple silicon) | `reviewtab-VERSION-macos-arm64.tar.gz` | Double-click `ReviewTab.command`. If blocked, choose Open Anyway in System Settings > Privacy & Security |
-| Linux (x64, glibc 2.28 or later) | `reviewtab-VERSION-linux-x64.tar.gz` | Run `./reviewtab.sh` in a terminal |
+## Models and confidentiality
 
-ReviewTab opens in your browser. Keep the start window open while you work and close it to quit.
-Your reviews are kept apart from the app folder, so a new version is simply unpacked into a new
-folder. `README.txt` in the archive has the details.
+- The app accepts model endpoints on your computer or private network, or OpenRouter with zero data retention (ZDR). Other services are refused.
+- An approved model task sends the required manuscript text to the selected endpoint. Approved bibliography/full-text lookups send queries to scholarly services.
+- No manuscript content, usage data or telemetry is sent to the app's author.
+- The reviewer decides whether a journal's confidentiality and AI-use policies permit a model or lookup.
+- Browser extensions allowed to read the page can also read the manuscript. Use a browser profile appropriate for confidential work.
 
-### Check a download
+Local-first is not an air gap or a security certification. Model/provider configuration, deployment settings and browser extensions affect confidentiality.
 
-Compare the file's SHA-256 with `SHA256SUMS` from the release:
+## Saved work, updating and removal
 
-```
-sha256sum -c SHA256SUMS --ignore-missing          # Linux
-shasum -a 256 -c SHA256SUMS --ignore-missing      # macOS
-certutil -hashfile reviewtab-VERSION-windows-x64.zip SHA256   # Windows
+Review data is stored separately from the app folder. To update, unpack a new version into a new folder; existing work remains in the data folder.
+
+Records are kept until explicitly deleted. **Saved data** in the app provides a preview and confirmation for deleting a manuscript's local records and uploaded copies. External originals, exports, backups and other data folders are not deleted by that action. There is no automatic expiry or secure-erasure guarantee.
+
+Do not share a data folder concurrently across machines or with older app versions. The archive's `README.txt` describes platform-specific storage locations and removal.
+
+## Check a download
+
+Download [SHA256SUMS](https://github.com/junhewk/reviewtab/releases/download/v0.1.1/SHA256SUMS) beside your archive. Each archive also has its own `.sha256` sidecar on the release.
+
+For a downloaded macOS archive, place its matching `.sha256` sidecar beside it and run:
+
+```sh
+shasum -a 256 -c reviewtab-0.1.1-macos-arm64.tar.gz.sha256
 ```
 
-### Licence
+For the Windows ZIP in PowerShell:
 
-ReviewTab is free to use under its own licence, which does not allow modification,
-redistribution or reverse engineering: read [LICENSE.md](LICENSE.md). The open-source components
-it includes, and their licences, are listed in `THIRD_PARTY_NOTICES.txt` in the archive.
+```powershell
+Get-FileHash .\reviewtab-0.1.1-windows-x64.zip -Algorithm SHA256
+```
+
+Compare the Windows result with its entry in `SHA256SUMS`. Checksum agreement confirms the bytes match the published value; it does not by itself authenticate the publisher or certify security. No app-level signed integrity manifest is provided for this release; macOS platform signing/notarization is separate.
+
+## Licence
+
+ReviewTab is free to use under its own licence. Read the `LICENSE.md` bundled with your download for the terms applicable to that version. Its `THIRD_PARTY_NOTICES.txt` lists included open-source components, their licences and the relinking-material offer.
