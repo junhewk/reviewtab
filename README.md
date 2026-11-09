@@ -6,19 +6,21 @@ A privacy/local-first, medical-centered reviewer-support workspace for confident
 
 This repository holds release downloads and public documentation only. The app's source repository is not published here.
 
-## Download 0.1.1
+## Download 0.1.2
 
-[Release notes and all assets](https://github.com/junhewk/reviewtab/releases/tag/v0.1.1)
+Version **0.1.2** is currently a draft release. The Linux x64 archive is attached; macOS arm64 and Windows x64 uploads are pending. The download links below become public when the release is published.
+
+[Release notes and all assets](https://github.com/junhewk/reviewtab/releases/tag/v0.1.2)
 
 | Platform | Download | Start |
 | --- | --- | --- |
-| Linux, x64 | [Linux archive](https://github.com/junhewk/reviewtab/releases/download/v0.1.1/reviewtab-0.1.1-linux-x64.tar.gz) | Run `./reviewtab.sh` in a terminal |
-| macOS, Apple silicon (arm64) | [macOS archive](https://github.com/junhewk/reviewtab/releases/download/v0.1.1/reviewtab-0.1.1-macos-arm64.tar.gz) | Double-click `ReviewTab.command` |
-| Windows, x64 | [Windows ZIP](https://github.com/junhewk/reviewtab/releases/download/v0.1.1/reviewtab-0.1.1-windows-x64.zip) | Double-click `ReviewTab.bat` |
+| Linux, x64 | [Linux archive](https://github.com/junhewk/reviewtab/releases/download/v0.1.2/reviewtab-0.1.2-linux-x64.tar.gz) | Run `./reviewtab.sh` in a terminal |
+| macOS, Apple silicon (arm64) | [macOS archive (upload pending)](https://github.com/junhewk/reviewtab/releases/download/v0.1.2/reviewtab-0.1.2-macos-arm64.tar.gz) | Double-click `ReviewTab.command` |
+| Windows, x64 | [Windows ZIP (upload pending)](https://github.com/junhewk/reviewtab/releases/download/v0.1.2/reviewtab-0.1.2-windows-x64.zip) | Double-click `ReviewTab.bat` |
 
-**macOS:** Developer ID signed and notarized by Apple. Unpack the archive and confirm the normal macOS Open dialog on first launch.
+**macOS:** The 0.1.2 Apple silicon build is pending upload. Check its release notes for signing and notarization details.
 
-**Windows:** This ZIP is **unsigned**. Smart App Control or other application-control policies may block it. Smart App Control blocked execution on the build machine, so packaged startup was not verified there. Unsigned ZIP distribution is intentional for this release; it is not a signed or Smart App Control-verified build.
+**Windows:** The 0.1.2 x64 build is pending upload. Check its release notes for signing, application-control and packaged-startup verification details.
 
 **Linux:** Unpack the archive, open a terminal in its folder and run `./reviewtab.sh`. Keep that terminal open while working.
 
@@ -29,7 +31,8 @@ The app is compiled with Bun 1.4.3. No source checkout or separately installed N
 ## What it supports
 
 - **Argument:** inspect and edit source-linked argument diagrams and open review issues.
-- **Section review:** choose prose checks or a quantitative, qualitative, systematic, scoping or narrative-review methodology focus, within a limited budget.
+- **Prose section review:** inspect local contradictions, concepts and reasoning, with its own approval and limited budget.
+- **Methodology review:** choose a quantitative, qualitative, systematic, scoping or narrative-review profile, with approval, budget, progress and results separate from prose review.
 - **Citations and references:** choose local mechanical checks, approved bibliographic-record lookups or experimental deep content comparison.
 - **Reviewer-owned notes and comments:** inspect source and model suggestions side by side, then adopt, revise or reject them. Export explicitly adopted comments as Markdown.
 
@@ -42,8 +45,10 @@ This is focused support, not an all-round review system. It does not aim to find
 1. Download and unpack the archive for your system.
 2. Open its start file from the table above. ReviewTab opens in your browser; keep the start window open while working.
 3. Open a manuscript. Viewing a document and taking notes need no model.
-4. Choose a model when needed. Each model task shows its scope and budget and runs only after approval.
+4. Choose a model, then use the start button for the review you want. Each model task shows its scope and budget and runs only after approval.
 5. Review the suggestions and source evidence, then select and edit the comments you want to include.
+
+Prose section review and methodology review can both run on the same article in either order. Finishing one review never starts another.
 
 The app interface supports English and Korean. Review output has its own recorded language setting; quotations stay in the source language.
 
@@ -69,24 +74,24 @@ Do not share a data folder concurrently across machines or with older app versio
 
 ## Check a download
 
-Download [SHA256SUMS](https://github.com/junhewk/reviewtab/releases/download/v0.1.1/SHA256SUMS) beside your archive. Each archive also has its own `.sha256` sidecar on the release.
+Download [SHA256SUMS](https://github.com/junhewk/reviewtab/releases/download/v0.1.2/SHA256SUMS) beside your archive. The draft currently provides a Linux-only manifest; it will be updated as platform builds are added. The Linux archive also has its own `.sha256` sidecar on the release.
 
 For a downloaded Linux archive, place its matching `.sha256` sidecar beside it and run:
 
 ```sh
-sha256sum -c reviewtab-0.1.1-linux-x64.tar.gz.sha256
+sha256sum -c reviewtab-0.1.2-linux-x64.tar.gz.sha256
 ```
 
 For a downloaded macOS archive, place its matching `.sha256` sidecar beside it and run:
 
 ```sh
-shasum -a 256 -c reviewtab-0.1.1-macos-arm64.tar.gz.sha256
+shasum -a 256 -c reviewtab-0.1.2-macos-arm64.tar.gz.sha256
 ```
 
 For the Windows ZIP in PowerShell:
 
 ```powershell
-Get-FileHash .\reviewtab-0.1.1-windows-x64.zip -Algorithm SHA256
+Get-FileHash .\reviewtab-0.1.2-windows-x64.zip -Algorithm SHA256
 ```
 
 Compare the Windows result with its entry in `SHA256SUMS`. Checksum agreement confirms the bytes match the published value; it does not by itself authenticate the publisher or certify security. No app-level signed integrity manifest is provided for this release; macOS platform signing/notarization is separate.
