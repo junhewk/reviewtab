@@ -8,19 +8,19 @@ This repository holds release downloads and public documentation only. The app's
 
 ## Download 0.1.2
 
-Version **0.1.2** is currently a draft release. The Linux x64 archive is attached; macOS arm64 and Windows x64 uploads are pending. The download links below become public when the release is published.
+Version **0.1.2** is currently a draft release. Linux x64, macOS arm64 and Windows x64 archives are attached. The download links below become public when the release is published.
 
 [Release notes and all assets](https://github.com/junhewk/reviewtab/releases/tag/v0.1.2)
 
 | Platform | Download | Start |
 | --- | --- | --- |
 | Linux, x64 | [Linux archive](https://github.com/junhewk/reviewtab/releases/download/v0.1.2/reviewtab-0.1.2-linux-x64.tar.gz) | Run `./reviewtab.sh` in a terminal |
-| macOS, Apple silicon (arm64) | [macOS archive (upload pending)](https://github.com/junhewk/reviewtab/releases/download/v0.1.2/reviewtab-0.1.2-macos-arm64.tar.gz) | Double-click `ReviewTab.command` |
-| Windows, x64 | [Windows ZIP (upload pending)](https://github.com/junhewk/reviewtab/releases/download/v0.1.2/reviewtab-0.1.2-windows-x64.zip) | Double-click `ReviewTab.bat` |
+| macOS, Apple silicon (arm64) | [macOS archive](https://github.com/junhewk/reviewtab/releases/download/v0.1.2/reviewtab-0.1.2-macos-arm64.tar.gz) | Double-click `ReviewTab.command` |
+| Windows, x64 | [Windows ZIP](https://github.com/junhewk/reviewtab/releases/download/v0.1.2/reviewtab-0.1.2-windows-x64.zip) | Double-click `ReviewTab.bat` |
 
-**macOS:** The 0.1.2 Apple silicon build is pending upload. Check its release notes for signing and notarization details.
+**macOS:** Developer ID signed and notarized by Apple. Unpack the archive and open `ReviewTab.command`; confirm the normal macOS Open dialog if shown.
 
-**Windows:** The 0.1.2 x64 build is pending upload. Check its release notes for signing, application-control and packaged-startup verification details.
+**Windows:** This ZIP is **unsigned**. Smart App Control blocked startup on the build machine, so packaged review and persistence were not verified there. Application-control policies may prevent this executable from starting.
 
 **Linux:** Unpack the archive, open a terminal in its folder and run `./reviewtab.sh`. Keep that terminal open while working.
 
@@ -74,7 +74,7 @@ Do not share a data folder concurrently across machines or with older app versio
 
 ## Check a download
 
-Download [SHA256SUMS](https://github.com/junhewk/reviewtab/releases/download/v0.1.2/SHA256SUMS) beside your archive. The draft currently provides a Linux-only manifest; it will be updated as platform builds are added. The Linux archive also has its own `.sha256` sidecar on the release.
+Download [SHA256SUMS](https://github.com/junhewk/reviewtab/releases/download/v0.1.2/SHA256SUMS) beside your archive. The manifest covers all three platform archives. Each archive also has its own `.sha256` sidecar on the release.
 
 For a downloaded Linux archive, place its matching `.sha256` sidecar beside it and run:
 
