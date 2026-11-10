@@ -8,7 +8,7 @@ This repository holds release downloads and public documentation only. The app's
 
 ## Download 0.1.2
 
-Version **0.1.2** is currently a draft release. Linux x64, macOS arm64 and Windows x64 archives are attached. The download links below become public when the release is published.
+Version **0.1.2** is available for Linux x64, macOS arm64 and Windows x64.
 
 [Release notes and all assets](https://github.com/junhewk/reviewtab/releases/tag/v0.1.2)
 
