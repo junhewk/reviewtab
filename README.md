@@ -6,17 +6,17 @@ A privacy/local-first, medical-centered reviewer-support workspace for confident
 
 This repository holds release downloads and public documentation only. The app's source repository is not published here.
 
-## Download 0.1.2
+## Download 0.1.3
 
-Version **0.1.2** is available for Linux x64, macOS arm64 and Windows x64.
+Version **0.1.3** is available for Linux x64, macOS arm64 and Windows x64.
 
-[Release notes and all assets](https://github.com/junhewk/reviewtab/releases/tag/v0.1.2)
+[Release notes and all assets](https://github.com/junhewk/reviewtab/releases/tag/v0.1.3)
 
 | Platform | Download | Start |
 | --- | --- | --- |
-| Linux, x64 | [Linux archive](https://github.com/junhewk/reviewtab/releases/download/v0.1.2/reviewtab-0.1.2-linux-x64.tar.gz) | Run `./reviewtab.sh` in a terminal |
-| macOS, Apple silicon (arm64) | [macOS archive](https://github.com/junhewk/reviewtab/releases/download/v0.1.2/reviewtab-0.1.2-macos-arm64.tar.gz) | Double-click `ReviewTab.command` |
-| Windows, x64 | [Windows ZIP](https://github.com/junhewk/reviewtab/releases/download/v0.1.2/reviewtab-0.1.2-windows-x64.zip) | Double-click `ReviewTab.bat` |
+| Linux, x64 | [Linux archive](https://github.com/junhewk/reviewtab/releases/download/v0.1.3/reviewtab-0.1.3-linux-x64.tar.gz) | Run `./reviewtab.sh` in a terminal |
+| macOS, Apple silicon (arm64) | [macOS archive](https://github.com/junhewk/reviewtab/releases/download/v0.1.3/reviewtab-0.1.3-macos-arm64.tar.gz) | Double-click `ReviewTab.command` |
+| Windows, x64 | [Windows ZIP](https://github.com/junhewk/reviewtab/releases/download/v0.1.3/reviewtab-0.1.3-windows-x64.zip) | Double-click `ReviewTab.bat` |
 
 **macOS:** Developer ID signed and notarized by Apple. Unpack the archive and open `ReviewTab.command`; confirm the normal macOS Open dialog if shown.
 
@@ -30,7 +30,7 @@ The app is compiled with Bun 1.4.3. No source checkout or separately installed N
 
 ## What it supports
 
-- **Argument:** inspect and edit source-linked argument diagrams and open review issues.
+- **Argument:** inspect and edit a provisional, source-linked reconstruction of the manuscript’s reasoning to assess the paper and prepare review comments. Generation and optional critique require separate approvals; critique offers suggestions for the reviewer to assess.
 - **Prose section review:** inspect local contradictions, concepts and reasoning, with its own approval and limited budget.
 - **Methodology review:** choose a quantitative, qualitative, systematic, scoping or narrative-review profile, with approval, budget, progress and results separate from prose review.
 - **Citations and references:** choose local mechanical checks, approved bibliographic-record lookups or experimental deep content comparison.
@@ -74,24 +74,24 @@ Do not share a data folder concurrently across machines or with older app versio
 
 ## Check a download
 
-Download [SHA256SUMS](https://github.com/junhewk/reviewtab/releases/download/v0.1.2/SHA256SUMS) beside your archive. The manifest covers all three platform archives. Each archive also has its own `.sha256` sidecar on the release.
+Download [SHA256SUMS](https://github.com/junhewk/reviewtab/releases/download/v0.1.3/SHA256SUMS) beside your archive. The manifest covers all three platform archives. Each archive also has its own `.sha256` sidecar on the release.
 
 For a downloaded Linux archive, place its matching `.sha256` sidecar beside it and run:
 
 ```sh
-sha256sum -c reviewtab-0.1.2-linux-x64.tar.gz.sha256
+sha256sum -c reviewtab-0.1.3-linux-x64.tar.gz.sha256
 ```
 
 For a downloaded macOS archive, place its matching `.sha256` sidecar beside it and run:
 
 ```sh
-shasum -a 256 -c reviewtab-0.1.2-macos-arm64.tar.gz.sha256
+shasum -a 256 -c reviewtab-0.1.3-macos-arm64.tar.gz.sha256
 ```
 
 For the Windows ZIP in PowerShell:
 
 ```powershell
-Get-FileHash .\reviewtab-0.1.2-windows-x64.zip -Algorithm SHA256
+Get-FileHash .\reviewtab-0.1.3-windows-x64.zip -Algorithm SHA256
 ```
 
 Compare the Windows result with its entry in `SHA256SUMS`. Checksum agreement confirms the bytes match the published value; it does not by itself authenticate the publisher or certify security. No app-level signed integrity manifest is provided for this release; macOS platform signing/notarization is separate.
