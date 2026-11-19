@@ -15,10 +15,10 @@ Version **0.1.3** is available for Linux x64, macOS arm64 and Windows x64.
 | Platform | Download | Start |
 | --- | --- | --- |
 | Linux, x64 | [Linux archive](https://github.com/junhewk/reviewtab/releases/download/v0.1.3/reviewtab-0.1.3-linux-x64.tar.gz) | Run `./reviewtab.sh` in a terminal |
-| macOS, Apple silicon (arm64) | [macOS archive](https://github.com/junhewk/reviewtab/releases/download/v0.1.3/reviewtab-0.1.3-macos-arm64.tar.gz) | Double-click `ReviewTab.command` |
+| macOS, Apple silicon (arm64) | [macOS archive](https://github.com/junhewk/reviewtab/releases/download/v0.1.3/reviewtab-0.1.3-macos-arm64.tar.gz) | Run `./reviewtab web --open` in Terminal |
 | Windows, x64 | [Windows ZIP](https://github.com/junhewk/reviewtab/releases/download/v0.1.3/reviewtab-0.1.3-windows-x64.zip) | Double-click `ReviewTab.bat` |
 
-**macOS:** Developer ID signed and notarized by Apple. Unpack the archive and open `ReviewTab.command`; confirm the normal macOS Open dialog if shown.
+**macOS:** Unpack the archive, open Terminal in the extracted folder and run `./reviewtab web --open`. The `reviewtab` executable is signed with Developer ID and notarized by Apple. Keep Terminal open while working.
 
 **Windows:** This ZIP is **unsigned**. Smart App Control blocked startup on the build machine, so packaged review and persistence were not verified there. Application-control policies may prevent this executable from starting.
 
