@@ -15,10 +15,10 @@ Version **0.1.3** is available for Linux x64, macOS arm64 and Windows x64.
 | Platform | Download | Start |
 | --- | --- | --- |
 | Linux, x64 | [Linux archive](https://github.com/junhewk/reviewtab/releases/download/v0.1.3/reviewtab-0.1.3-linux-x64.tar.gz) | Run `./reviewtab.sh` in a terminal |
-| macOS, Apple silicon (arm64) | [macOS archive](https://github.com/junhewk/reviewtab/releases/download/v0.1.3/reviewtab-0.1.3-macos-arm64.tar.gz) | Run `./reviewtab web --open` in Terminal |
+| macOS, Apple silicon (arm64) | [ReviewTab.app ZIP](https://github.com/junhewk/reviewtab/releases/download/v0.1.3/reviewtab-0.1.3-macos-arm64-app.zip) | Unzip and double-click `ReviewTab.app` |
 | Windows, x64 | [Windows ZIP](https://github.com/junhewk/reviewtab/releases/download/v0.1.3/reviewtab-0.1.3-windows-x64.zip) | Double-click `ReviewTab.bat` |
 
-**macOS:** Unpack the archive, open Terminal in the extracted folder and run `./reviewtab web --open`. The `reviewtab` executable is signed with Developer ID and notarized by Apple. Keep Terminal open while working.
+**macOS:** Unzip and double-click `ReviewTab.app`. The app is Developer ID signed and notarized by Apple. It opens your default browser. Choose **Quit ReviewTab** from the app menu or the Dock when you are done. A [Terminal download](https://github.com/junhewk/reviewtab/releases/download/v0.1.3/reviewtab-0.1.3-macos-arm64.tar.gz) is available for running `./reviewtab web --open` from the extracted folder.
 
 **Windows:** This ZIP is **unsigned**. Smart App Control blocked startup on the build machine, so packaged review and persistence were not verified there. Application-control policies may prevent this executable from starting.
 
@@ -74,7 +74,7 @@ Do not share a data folder concurrently across machines or with older app versio
 
 ## Check a download
 
-Download [SHA256SUMS](https://github.com/junhewk/reviewtab/releases/download/v0.1.3/SHA256SUMS) beside your archive. The manifest covers all three platform archives. Each archive also has its own `.sha256` sidecar on the release.
+Download [SHA256SUMS](https://github.com/junhewk/reviewtab/releases/download/v0.1.3/SHA256SUMS) beside your archive. The manifest covers all platform downloads. Each archive also has its own `.sha256` sidecar on the release.
 
 For a downloaded Linux archive, place its matching `.sha256` sidecar beside it and run:
 
@@ -85,7 +85,7 @@ sha256sum -c reviewtab-0.1.3-linux-x64.tar.gz.sha256
 For a downloaded macOS archive, place its matching `.sha256` sidecar beside it and run:
 
 ```sh
-shasum -a 256 -c reviewtab-0.1.3-macos-arm64.tar.gz.sha256
+shasum -a 256 -c reviewtab-0.1.3-macos-arm64-app.zip.sha256
 ```
 
 For the Windows ZIP in PowerShell:
